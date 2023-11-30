@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body onload="displaydt()">
+	<nav>
+		<div class="navbar-brand"><a href=".">Weather Forecast</a></div>
+		<div class="search-bar">
+		  <input id="cityInput" type="text" placeholder="Houston, Texas">
+		  <button id="searchBtn"><i class="fa fa-search"></i></button>
+		</div>
+		<ul class="navbar-menu">
+		  <li><a href="Weather Map/index.html">Switch to Map</a></li>
+		</ul>
+	  </nav>
+ 
+<div class="container" id="container">
+
+  <div class="carousel">
+
+    <!-- <div class="carousel-item">
+      <div class="preForecast">
+        <div class="preWeather">
+          <div class="dateStyle" id="past2">Two Days Ago Conditions</div>
+          <div class="current">Weather Conditions</div>
+        <div class="location" id="location6"></div>
+        <img class="icon" id="icon6" src=""/>
+        <div class="condition" id="condition6"></div>
+        <div class="temperature" id="temperature6"></div>
+        <div class="hilowtemps">
+          <div class="futHighTemp" id="highTemp6"></div>
+          <div class="futLowTemp" id="lowTemp6"></div>
+      </div>
+      <div class="description" id="description6"></div>
+      <div class="forecastList" id="forecastList"></div>
+    </div>
+    </div>
+      </div>
+
+  <div class="carousel-item">
+    <div class="preForecast">
+    <div class="preWeather">
+      <div class="dateStyle" id="past">Yesterday's Conditions</div>
+      <div class="current">Weather Conditions</div>
+      <div class="location" id="location7"></div>
+      <img class="icon" id="icon7" src=""/>
+      <div class="condition" id="condition7"></div>
+      <div class="temperature" id="temperature7"></div>
+      <div class="hilowtemps">
+        <div class="futHighTemp" id="highTemp7"></div>
+        <div class="futLowTemp" id="lowTemp7"></div>
+    </div>
+    <div class="description" id="description7"></div>
+    <div class="forecastList" id="forecastList"></div>
+  </div>
+  </div>
+    </div> -->
+
+    <div class="carousel-item carousel-item-visible">
+      <div class="weather">
+      <div class="dateStyle" id="current"></div>
+      <div class="current">Weather Conditions</div>
+      <div class="location" id="location1"></div>
+      <div class="precipitation" id="precipitation"></div>
+      <img class="icon" id="icon" src=""/>
+      <div class="condition" id="condition"></div>
+      <div class="temperature" id="temperature"></div>
+      <div class="hilowtemps">
+        <div class="highTemp" id="highTemp"></div>
+        <div class="lowTemp" id="lowTemp"></div>
+      </div>
+      <div class="description" id="description"></div>
+      <div class="forecastList" id="forecastList"></div>
+    </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="futForecast">
+      <div class="futWeather">
+        <div class="dateStyle" id="future">Tomorrows Conditions</div>
+        <div class="current">Weather Conditions</div>
+        <div class="location" id="location2"></div>
+        <div class="precipitation" id="futPrecipitation"></div>
+        <img class="futIcon" id="futIcon" src=""/>
+        <div class="condition" id="futCondition"></div>
+        <div class="hilowtemps">
+          <div class="futHighTemp" id="futHighTemp"></div>
+          <div class="futLowTemp" id="futLowTemp"></div>
+      </div>
+      <div class="description" id="futDescription"></div>
+      <div class="futForecastList" id="futForecastList"></div>
+    </div>
+    </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="futForecast">
+      <div class="futWeather">
+        <div class="dateStyle" id="future2">Two Days Conditions</div>
+        <div class="current">Weather Conditions</div>
+        <div class="location" id="location3"></div>
+        <div class="precipitation" id="futPrecipitation2"></div>
+        <img class="futIcon2" id="futIcon2" src=""/>
+        <div class="condition" id="futCondition2"></div>
+        <div class="hilowtemps">
+          <div class="futHighTemp" id="futHighTemp2"></div>
+          <div class="futLowTemp" id="futLowTemp2"></div>
+      </div>
+      <div class="description" id="futDescription2"></div>
+      <div class="futforecastList2" id="futforecastList2"></div>
+    </div>
+    </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="futForecast">
+      <div class="futWeather">
+        <div class="dateStyle" id="future3">Three Days Conditions</div>
+        <div class="current">Weather Conditions</div>
+        <div class="location" id="location4"></div>
+        <div class="precipitation" id="futPrecipitation3"></div>
+        <img class="futIcon3" id="futIcon3" src=""/>
+        <div class="condition" id="futCondition3"></div>
+        <div class="futTemperature3" id="futTemperature3"></div>
+        <div class="hilowtemps">
+          <div class="futHighTemp" id="futHighTemp3"></div>
+          <div class="futLowTemp" id="futLowTemp3"></div>
+      </div>
+      <div class="description" id="futDescription3"></div>
+      <div class="futforecastList3" id="futforecastList3"></div>
+    </div>
+    </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="futForecast">
+      <div class="futWeather">
+        <div class="dateStyle" id="future4">Four Days Conditions</div>
+        <div class="current">Weather Conditions</div>
+        <div class="location" id="location5"></div>
+        <div class="precipitation" id="futPrecipitation4"></div>
+        <img class="futIcon4" id="futIcon4" src=""/>
+        <div class="condition" id="futCondition4"></div>
+        <div class="hilowtemps">
+          <div class="futHighTemp" id="futHighTemp4"></div>
+          <div class="futLowTemp" id="futLowTemp4"></div>
+      </div>
+      <div class="description" id="futDescription4"></div>
+      <div class="futforecastList4" id="futforecastList4"></div>
+    </div>
+    </div>
+    </div>
+
+    <div class="carousel-actions">
+      <button id="carousel-button-prev" aria-label="Previous"><</button>
+      <button id="carousel-button-next" aria-label="Next">></button>
+  </div>
+
+    <div class="carousel-dots">
+      <input class="dot selected-dot" type="radio" name="dot" checked/>
+      <input class="dot" type="radio" name="dot" />
+      <input class="dot" type="radio" name="dot"/>
+      <input class="dot" type="radio" name="dot" />
+      <input class="dot" type="radio" name="dot" />
+      <!-- <input class="dot" type="radio" name="dot" />
+      <input class="dot" type="radio" name="dot" /> -->
+  </div>
+</div>
+
+  </div>
+
+  <div class="container2" id="container2">
+    <h1>Today's Hourly Forecast</h1>
+    <div class="carousel2">
+
+      <div class="item">
+        <div class="hr_fut">
+          <div class="hrCurrent" id="hrCurrent"></div>
+          <img class="hrIcon" id="hrIcon" src=""/>
+          <div class="hrTemp" id="hrTemp"></div>
+          <div class="hrPrecipitation" id="hrPrecipitation"></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="hr_fut">
+        <div class="hrCurrent" id="hrCurrent2"></div>
+        <img class="hrIcon" id="hrIcon2" src=""/>
+        <div class="hrTemp" id="hrTemp2"></div>
+        <div class="hrPrecipitation" id="hrPrecipitation2"></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="hr_fut">
+      <div class="hrCurrent" id="hrCurrent3"></div>
+      <img class="hrIcon" id="hrIcon3" src=""/>
+      <div class="hrTemp" id="hrTemp3"></div>
+      <div class="hrPrecipitation" id="hrPrecipitation3"></div>
+  </div>
+</div>
+
+<div class="item">
+  <div class="hr_fut">
+    <div class="hrCurrent" id="hrCurrent4"></div>
+    <img class="hrIcon" id="hrIcon4" src=""/>
+    <div class="hrTemp" id="hrTemp4"></div>
+    <div class="hrPrecipitation" id="hrPrecipitation4"></div>
+</div>
+</div>
+
+<div class="item">
+  <div class="hr_fut">
+    <div class="hrCurrent" id="hrCurrent5"></div>
+    <img class="hrIcon" id="hrIcon5" src=""/>
+    <div class="hrTemp" id="hrTemp5"></div>
+    <div class="hrPrecipitation" id="hrPrecipitation5"></div>
+</div>
+</div>
+
+
+
+    <!-- <div class="carousel-actions2">
+      <button id="carousel-button-prev2" aria-label="Previous"><</button>
+      <button id="carousel-button-next2" aria-label="Next">></button>
+  </div>
+
+    <div class="carousel-dots2">
+      <input class="dot2 selected-dot2" type="radio" name="dot2" checked/>
+      <input class="dot2" type="radio" name="dot2" />
+      <input class="dot2" type="radio" name="dot2" />
+      <input class="dot2" type="radio" name="dot2" />
+      <input class="dot2" type="radio" name="dot2" />
+      <input class="dot2" type="radio" name="dot2" />
+      <input class="dot2" type="radio" name="dot2" />
+  </div> -->
+</div>
+
+    </div>
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrXZntT3UIvRTD1745gmahFyaXjaRQiaA"></script>
+  <script src="main.js"></script>
+</body>
+</html>

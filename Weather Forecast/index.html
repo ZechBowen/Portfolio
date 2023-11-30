@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-1j/tFLzGrOVPQVEq0NqOoQ+HvcOJZa1zLXeq1+e/6JNajHFrPhAIsx3k3CkI2EhJZiyfHRZj9bhhcI/sWbbJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<nav>
+		<div class="navbar-brand">Weather Forecast</div>
+		<div class="search-bar">
+		  <input id="searchBtn" type="text" placeholder="Search...">
+		  <button><i class="fa fa-search"></i></button>
+		</div>
+		<ul class="navbar-menu">
+		  <li><a href="Weather Map/index.html">Switch to Map</a></li>
+		</ul>
+	  </nav>
+  <div class="container" id="container">
+    <div class="weather">
+	  <div class="current">Current Conditions</div>
+      <div class="location" id="location"></div>
+      <img class="icon" id="icon" src=""/>
+	  <div class="description" id="description"></div>
+      <div class="temperature" id="temperature"></div>
+    </div>
+  </div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrXZntT3UIvRTD1745gmahFyaXjaRQiaA"></script>
+  <script src="main.js"></script>
+</body>
+</html>

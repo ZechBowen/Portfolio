@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple Clock</title>
+        <link rel="icon" href="">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body onload="display_ct()">
+        <h1>A Simple Clock App</h1>
+        <h1 id="showTime"></h1>
+        <h1 id="showMTime"></h1>
+        <h1 id="showDate"></h1>
+        <button onclick="display_mt()">Display Military Time Format</button>
+        <script>
+
+            function display_ct() {
+            let dtFormat = new Intl.DateTimeFormat('default');
+            let tmFormat = new Intl.DateTimeFormat('en-US', {
+                hour:"numeric",
+                minute: "numeric", 
+                second: "numeric"
+            });
+            var d = new Date();
+            document.getElementById("showTime").innerHTML = tmFormat.format(d);
+            document.getElementById("showDate").innerHTML = dtFormat.format(d);
+            display_t();
+        }
+
+            function display_mt() {
+                let mtFormat = new Intl.DateTimeFormat('en-US', {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                    hour12: false
+                });
+                let x = new Date();
+                document.getElementById("showMTime").innerHTML = mtFormat.format(x);
+                display_c();
+            }
+
+            function display_t() {
+                var refresh = 0500; 
+                myTime = setTimeout('display_ct()', refresh);
+            }
+
+            function display_c() {
+                var refresh = 0500; 
+                myTime = setTimeout('display_mt()', refresh);
+            }
+
+        </script>
+    </body>
+</html>

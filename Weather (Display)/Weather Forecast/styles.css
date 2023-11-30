@@ -1,0 +1,416 @@
+* {
+	box-sizing: border-box;
+  }
+  
+  body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f1f1f1;
+  }
+  
+  .container {
+	display: flex;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hr_fut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 25px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 15px;
+    width: 100px;
+  }
+
+  .hrPrecipitation {
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .hrIcon {
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .hrTemp {
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  .hrCurrent {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .item {
+    display: block; 
+    margin: auto 10px;
+    animation: fadeVisibility 0.5s; 
+  }
+
+  .item2 {
+    display: block; 
+    margin: auto 10px;
+    animation: fadeVisibility 0.5s; 
+  }
+  
+  .weather {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    margin: 25px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 15px;
+  }
+
+  .futWeather {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+
+  .preWeather {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+
+  .current {
+	color: rgb(0, 0, 109);
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-align: center;
+	justify-content: center;
+  }
+
+  .dateStyle {
+	color: rgb(194, 94, 0);
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-align: center;
+	justify-content: center;
+  }
+
+  #current {
+	color: rgb(194, 94, 0);
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-align: center;
+	justify-content: center;
+  }
+
+  .location {
+	font-size: 34px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: center;
+  }
+  
+  img {
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+  }
+  
+  .temperature {
+	font-size: 48px;
+	font-weight: bold;
+	margin-bottom: 20px;
+  }
+
+  .precipitation {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .condition {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+
+  .description {
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 10px;
+  }
+
+  .lowTemp {
+	font-size: 24px;
+	display: grid;
+	margin-left: 10px;
+  }
+
+  .highTemp {
+	font-size: 24px;
+	display: grid;
+	margin-right: 10px;
+  }
+
+  .futLowTemp {
+	font-size: 24px;
+	font-weight: bold;
+	display: grid;
+	margin-left: 10px;
+  }
+
+  .futHighTemp {
+	font-size: 24px;
+	font-weight: bold;
+	display: grid;
+	margin-right: 10px;
+  }
+
+  .hilowtemps {
+	margin-bottom: 15px;
+	display: flex;
+  }
+  
+  a {
+	color: white;
+	text-decoration: none;
+  }
+
+  .preForecast {
+	display: flex;
+    align-items: center;
+    padding: 25px;
+    margin: 25px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    align-content: center;
+    justify-content: center;
+    border-radius: 15px;
+  }
+
+  .futForecast {
+	display: flex;
+    align-items: center;
+    padding: 25px;
+    margin: 25px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    align-content: center;
+    justify-content: center;
+    border-radius: 15px;
+  }
+
+  /*.hourly {
+	display: flex;
+	margin: 25px;
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .hourly ul {
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+  }*/
+
+  h1 {
+	font-size: 32px;
+  text-align: center;
+  }
+
+  nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+  }
+  
+  .navbar-brand {
+	font-size: 24px;
+  }
+  
+  .search-bar {
+	display: flex;
+	align-items: center;
+  }
+  
+  .search-bar input[type="text"] {
+	border: none;
+	padding: 5px;
+	margin-right: 5px;
+	background-color: #eee;
+	border-radius: 5px;
+  }
+  
+  .search-bar button {
+	border: none;
+	background-color: #bbb;
+	padding: 5px 5px;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  .search-bar button:hover {
+	background-color: #ddd;
+  }
+  
+  .navbar-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+  }
+  
+  .navbar-menu li {
+	margin-left: 10px;
+  }
+  
+  .navbar-menu a {
+	color: #fff;
+	text-decoration: none;
+  }
+  
+  .navbar-menu a:hover {
+	text-decoration: underline;
+  }
+  
+  .carousel {
+    max-width: 600px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.carousel2 {
+  max-width: 600px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item-hidden {
+    display: none; /* hide all slide images not currently being viewed */
+}
+
+.carousel2 .carousel-item2,
+.carousel2 .carousel-item-hidden2 {
+    display: none; /* hide all slide images not currently being viewed */
+}
+
+.carousel .carousel-item-visible {
+    display: block; /* show current slide image */
+    animation: fadeVisibility 0.5s; /* for fading effect when switching between slides */
+}
+
+.carousel2 .carousel-item-visible2 {
+  display: block; /* show current slide image */
+  animation: fadeVisibility 0.5s; /* for fading effect when switching between slides */
+}
+
+.carousel .carousel-item img {
+    max-width: 600px;
+    height: auto;
+}
+
+.carousel2 .carousel-item2 img {
+  max-width: 600px;
+  height: auto;
+}
+
+/* Navigation control styles */
+.carousel .carousel-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* put space between the navigation buttons */
+    position: absolute; /* position navigation buttons on top */
+    top: 50%; /* center navigation buttons on the slide */
+    transform: translateY(-50%); /* align navigation buttons */
+}
+
+.carousel2 .carousel-actions2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; /* put space between the navigation buttons */
+  position: absolute; /* position navigation buttons on top */
+  top: 50%; /* center navigation buttons on the slide */
+  transform: translateY(-50%); /* align navigation buttons */
+}
+
+.carousel .carousel-actions button {
+    border-radius: 50px;
+    background-color: white;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel2 .carousel-actions2 button {
+  border-radius: 50px;
+  background-color: white;
+  border: 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.carousel .carousel-actions button#carousel-button-prev {
+    margin-left: 20px; /* prevent previous button from touching the side*/
+}
+
+.carousel2 .carousel-actions2 button#carousel-button-prev2 {
+  margin-left: 20px; /* prevent previous button from touching the side*/
+}
+
+.carousel .carousel-actions button#carousel-button-next {
+    margin-right: 20px;  /* prevent next button from touching the side*/
+}
+
+.carousel2 .carousel-actions2 button#carousel-button-next2 {
+  margin-right: 20px;  /* prevent next button from touching the side*/
+}
+
+.carousel-dots {
+    text-align: center; 
+}
+
+.carousel-dots2 {
+  text-align: center; 
+}
+
+.dot {
+    opacity: 0.7; /* gray out dots for slides not being visted */
+}
+
+.dot:focus {
+    border: 1px solid black; /* dot for currently visited slide */
+}
+
+/* hanlde smooth transitions between slides */
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
